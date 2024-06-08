@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Parameters:
+  EnvType:
+    Description: Environment type.
+    Default: dev
+    Type: String
+    AllowedValues: [prod, dev, test]
+    ConstraintDescription: must specify prod, dev, or test.
+    
+Resources:
+    SampleS3Bucket:
+        Type: AWS::S3::Bucket
+        Properties:
+            BucketName: SampleS3Bucket
+            VersioningConfiguration:
+                Status: Disabled
