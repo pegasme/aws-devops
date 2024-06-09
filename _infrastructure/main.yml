@@ -12,6 +12,5 @@ Resources:
     SampleS3Bucket:
         Type: AWS::S3::Bucket
         Properties:
-            BucketName: SampleS3Bucket
             VersioningConfiguration:
                 Status: Disabled
