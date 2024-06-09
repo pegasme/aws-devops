@@ -1,15 +1,18 @@
-AWSTemplateFormatVersion: "2010-09-09"
+AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
   EnvType:
     Description: Environment type.
     Default: dev
     Type: String
-    AllowedValues: [prod, dev, test]
+    AllowedValues:
+      - prod
+      - dev
+      - test
     ConstraintDescription: must specify prod, dev, or test.
 Resources:
   MyInstance:
-  Type: AWS::EC2::Instance
-  Properties:
-    AvailabilityZone: us-east-1a
-    ImageId: ami-0a3c3a20c09d6f377
-    InstanceType: t2.micro
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: us-east-1a
+      ImageId: ami-0a3c3a20c09d6f377
+      InstanceType: t2.micro
