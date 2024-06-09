@@ -11,6 +11,4 @@ Parameters:
 Resources:
     SampleS3Bucket:
         Type: AWS::S3::Bucket
-        Properties:
-            VersioningConfiguration:
-                Status: Disabled
+        BucketName: SampleS3Bucket_VorCloud
