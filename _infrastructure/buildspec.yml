@@ -13,8 +13,6 @@ phases:
       - unzip -q awscliv2.zip
       - ./aws/install -i /usr/local/aws-cli -b /usr/local/bin --update
       - /usr/local/bin/aws --version
-      - sudo yum -y install curl
-
   pre_build:
     commands:
       - echo "You are assuming the Role of running commands on the target account"
