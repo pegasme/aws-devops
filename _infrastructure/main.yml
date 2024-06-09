@@ -11,4 +11,9 @@ Parameters:
 Resources:
     SampleS3Bucket:
         Type: AWS::S3::Bucket
-        BucketName: SampleS3Bucket_VorCloud
+        Properties:
+            PublicAccessBlockConfiguration:
+                BlockPublicAcls: false
+                BlockPublicPolicy: false
+                IgnorePublicAcls: false
+                RestrictPublicBuckets: false
