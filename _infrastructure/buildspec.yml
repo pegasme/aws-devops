@@ -13,7 +13,7 @@ phases:
       - unzip -q awscliv2.zip
       - ./aws/install -i /usr/local/aws-cli -b /usr/local/bin --update
       - /usr/local/bin/aws --version
-      - yum -y install curl
+      - sudo yum -y install curl
 
   pre_build:
     commands:
