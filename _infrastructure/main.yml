@@ -9,11 +9,9 @@ Parameters:
     ConstraintDescription: must specify prod, dev, or test.
     
 Resources:
-    SampleS3Bucket:
-        Type: AWS::S3::Bucket
-        Properties:
-            PublicAccessBlockConfiguration:
-                BlockPublicAcls: false
-                BlockPublicPolicy: false
-                IgnorePublicAcls: false
-                RestrictPublicBuckets: false
+    MyInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: us-east-1a
+      ImageId: ami-0a3c3a20c09d6f377
+      InstanceType: t2.micro
